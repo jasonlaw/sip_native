@@ -93,9 +93,9 @@ class _HomePageState extends State<HomePage> {
                 ElevatedButton(
                   child: Text("2. SIP connect"),
                   onPressed: () async {
-                    String username = "254717008247";
-                    String password = "475bbd248835981240e0fab16cdeb5af";
-                    String domain = "138.68.167.56";
+                    String username = "cclaw";
+                    String password = "6513477";
+                    String domain = "sip.linphone.org";
                     bool response = await connectToSip(
                       username,
                       password,
@@ -119,7 +119,8 @@ class _HomePageState extends State<HomePage> {
                 ElevatedButton(
                   child: Text("Init call"),
                   onPressed: () async {
-                    bool res = await SipNative.initCall("254727751850");
+                    bool res =
+                        await SipNative.initCall("sip:yllew@sip.linphone.org");
                     if (res) {
                       initCallsStream();
                     }
